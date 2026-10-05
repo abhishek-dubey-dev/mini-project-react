@@ -1,0 +1,14 @@
+.info-box{
+    text-align: center;
+    margin-top: 16px;
+}
+
+.info-box-card{
+    display: flex;
+    justify-content: center;
+}
+
+.weather-icon {
+    color: #1976d2;
+    margin-bottom: 8px;
+}
