@@ -10,6 +10,10 @@ export default function SearchBox({ updateInfo }) {
   const [error, setError] = useState("");
 
   const getWeatherInfo = async (cityName) => {
+    if (!API_KEY) {
+      throw new Error("Weather API key is not configured.");
+    }
+
     let response = await fetch(
       `${API_URL}?q=${encodeURIComponent(cityName)}&appid=${API_KEY}&units=metric`,
     );
